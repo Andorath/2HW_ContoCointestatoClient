@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservice.conto/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.conto/">
+
+<xs:element name="deposit" type="tns:deposit"/>
+
+<xs:element name="getReadResults" type="tns:getReadResults"/>
+
+<xs:element name="getReadResultsResponse" type="tns:getReadResultsResponse"/>
+
+<xs:element name="getWriteResult" type="tns:getWriteResult"/>
+
+<xs:element name="getWriteResultResponse" type="tns:getWriteResultResponse"/>
+
+<xs:element name="read" type="tns:read"/>
+
+<xs:element name="readResponse" type="tns:readResponse"/>
+
+<xs:element name="withdraw" type="tns:withdraw"/>
+
+<xs:complexType name="getReadResults">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getReadResultsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="withdraw">
+<xs:sequence>
+<xs:element name="userID" type="xs:string" minOccurs="0"/>
+<xs:element name="operationValue" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deposit">
+<xs:sequence>
+<xs:element name="userID" type="xs:string" minOccurs="0"/>
+<xs:element name="operationValue" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWriteResult">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getWriteResultResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="read">
+<xs:sequence>
+<xs:element name="userID" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
